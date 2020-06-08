@@ -25,6 +25,7 @@
         
 ## Creating a Docker Image
 Run the below command in docker terminal to start the docker build process: 
+    
     `docker build -t spring-boot-docker:0.0.1-SNAPSHOT .`
    ![Image is build](image/Muiti-stage-docker-build.jpg)
 
@@ -45,10 +46,14 @@ Run the below command in docker terminal to start the docker build process:
 
 ## Make a call to docker image:
  Make a call to `http://192.168.99.100:8084` from postman: 
+ 
+   - `192.168.99.100` is the default IP address of Docker on Windows.
 
    ![List of images](image/api_call_to_docker_postman.jpg)
    
-   Application Log in docker terminal:
+   - Response give `172.17.0.2`, as the IP address. That is the container's subnet IPv4 address. 
+   
+   Application log in docker terminal:
 
    ![List of images](image/api_call_to_docker_log.jpg)
 
